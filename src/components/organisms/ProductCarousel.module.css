@@ -1,0 +1,90 @@
+.carouselRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.productsGrid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.arrowBtn {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #222;
+  cursor: pointer;
+  padding: 0 16px;
+  transition: color 0.2s;
+  user-select: none;
+  font-family: var(--font-primary);
+}
+
+.arrowBtn:hover {
+  color: #e6c200;
+}
+
+.paginationBar {
+  width: 60vw;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 12px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationTrack {
+  width: 100%;
+  height: 6px;
+  background: #ececec;
+  border-radius: 3px;
+  position: relative;
+}
+
+.paginationThumb {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #b1a16b;
+  border-radius: 3px;
+  transition: left 0.3s;
+}
+
+@media (max-width: 1200px) {
+  .productsGrid {
+    gap: 18px;
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 900px) {
+  .productsGrid {
+    gap: 10px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carouselRow {
+    gap: 6px;
+  }
+  .productsGrid {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .paginationBar {
+    width: 90vw;
+    max-width: 98vw;
+  }
+} 

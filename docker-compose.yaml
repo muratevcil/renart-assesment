@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=renart-assesment'
+      - 'POSTGRES_PASSWORD=4ss3sm3nt'
+      - 'POSTGRES_USER=assesmentuser'
+    ports:
+      - '5433:5432'
