@@ -1,4 +1,4 @@
-import { GoldApiManager } from "@/lib/infrastructure/goldapi/goldApiManager";
+import { GoldApiManager } from "@/lib/infrastructure/goldapi/goldApiAdapter";
 import { NextResponse } from "next/server";
 
 export async function GET() {

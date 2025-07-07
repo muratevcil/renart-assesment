@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 interface FilterDropdownProps {
   className?: string;
@@ -7,8 +8,11 @@ interface FilterDropdownProps {
 
 const FilterDropdown: React.FC<FilterDropdownProps> = ({ className = '' }) => {
   const router = useRouter();
-  const [priceRange, setPriceRange] = useState('');
-  const [popularityRange, setPopularityRange] = useState('');
+  const searchParams = useSearchParams();
+  const initialPriceRange = searchParams.get('price') || '';
+  const initialPopularityRange = searchParams.get('popularity') || '';
+  const [priceRange, setPriceRange] = useState(initialPriceRange);
+  const [popularityRange, setPopularityRange] = useState(initialPopularityRange);
 
   const handleFilter = () => {
     const params = new URLSearchParams();

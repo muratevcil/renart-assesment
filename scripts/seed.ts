@@ -1,4 +1,4 @@
-import { JewelryManager } from '../src/lib/infrastructure/postgresql/adapters/jewelryManager';
+import { JewelryManager } from '../src/lib/infrastructure/postgresql/adapters/jewelryAdapter';
 import { prisma } from '../src/lib/infrastructure/postgresql/prisma';
 
 async function main() {
