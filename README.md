@@ -77,6 +77,12 @@ This repository contains my solution for the Renart Full Stack Development Inter
 
 ---
 
+### Deployment
+
+The deployed version of project can be found in this address : http://3.78.115.57:3000/
+
+I deployed the project to the AWS EC2 instance. The database also runs in the same server.
+
 ## Contact
 
 If you have any questions, you can contact me through muratevcilf@gmail.com.
