@@ -1,182 +1,45 @@
-# Jewelry Product Display Application
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A modern Next.js application that displays jewelry products with an interactive carousel, color picker, and popularity scoring system.
+## Introduction
 
-## Features
+This is the repository of solution of Renart Full Stack Development Internship/Case Study. Altought I am intrested in backend development with Java Spring Boot, I built an app with Next.js/Prisma for fast development (all in once). The program contains all the features given in the instructions.
 
-- **Product Carousel**: Navigate through jewelry products using arrow buttons or swipe gestures
-- **Color Picker**: Switch between different color variants of each product
-- **Popularity Score**: Display popularity scores converted to a 5-star rating system
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Touch Support**: Swipe gestures for mobile navigation
-- **Modern UI**: Clean, modern interface with smooth animations
+<img width="1386" alt="Screenshot 2025-07-06 at 23 43 02" src="https://github.com/user-attachments/assets/f959ee7b-c2cb-4398-9ade-a6a92d37f98d" />
 
-## Prerequisites
+This is the basic scheme of the project.
 
-- Node.js 18+ 
-- PostgreSQL database
-- Docker (optional, for running PostgreSQL)
 
 ## Getting Started
 
-### 1. Install Dependencies
-
-```bash
-npm install
-```
-
-### 2. Set up the Database
-
-#### Option A: Using Docker (Recommended)
-
-```bash
-# Start PostgreSQL using Docker Compose
-docker-compose up -d
-```
-
-#### Option B: Using Local PostgreSQL
-
-Make sure you have PostgreSQL installed and create a database named `renart-assesment`.
-
-### 3. Configure Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-DATABASE_URL="postgresql://assesmentuser:4ss3sm3nt@localhost:5433/renart-assesment"
-```
-
-### 4. Set up the Database Schema
-
-```bash
-# Generate Prisma client
-npx prisma generate
-
-# Run database migrations
-npx prisma migrate dev
-```
-
-### 5. Seed the Database with Sample Data
-
-```bash
-# Install tsx if not already installed
-npm install -g tsx
-
-# Run the seed script
-npm run seed
-```
-
-### 6. Start the Development Server
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Application Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-src/
-├── app/
-│   ├── api/jewelry/route.ts    # API endpoint for jewelry data
-│   ├── page.tsx                # Main product display page
-│   ├── page.module.css         # Styles for the product page
-│   └── layout.tsx              # Root layout
-├── lib/
-│   └── infrastructure/
-│       └── postgresql/
-│           ├── adapters/
-│           │   └── jewelryManager.ts  # Database operations
-│           └── prisma.ts              # Prisma client
-└── generated/                  # Generated Prisma client
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## API Endpoints
+## Learn More
 
-- `GET /api/jewelry` - Returns all jewelry products
+To learn more about Next.js, take a look at the following resources:
 
-## Database Schema
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-The application uses a PostgreSQL database with the following schema:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```sql
-CREATE TABLE "Jewelry" (
-    "id" SERIAL NOT NULL,
-    "name" TEXT NOT NULL,
-    "weight" DECIMAL(4,2) NOT NULL,
-    "imageUrls" TEXT[],
-    "popularityScore" DECIMAL(4,2) NOT NULL,
-    CONSTRAINT "Jewelry_pkey" PRIMARY KEY ("id")
-);
-```
+## Deploy on Vercel
 
-## Features in Detail
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### Product Carousel
-- Navigate through products using left/right arrow buttons
-- Swipe gestures supported on mobile devices
-- Smooth transitions between products
-- Product counter showing current position
-
-### Color Picker
-- Click on color thumbnails to change the main product image
-- Visual feedback for selected color
-- Responsive design for different screen sizes
-
-### Popularity Score
-- Converts raw popularity scores to a 5-star rating system
-- Displays with one decimal place precision
-- Visual star representation with half-star support
-
-### Responsive Design
-- Mobile-first approach
-- Touch-friendly interface
-- Optimized for different screen sizes
-- Dark mode support
-
-## Development
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run seed` - Seed database with sample data
-
-### Database Operations
-
-```bash
-# Generate Prisma client after schema changes
-npx prisma generate
-
-# Run migrations
-npx prisma migrate dev
-
-# Open Prisma Studio (database GUI)
-npx prisma studio
-```
-
-## Technologies Used
-
-- **Next.js 15** - React framework
-- **TypeScript** - Type safety
-- **Prisma** - Database ORM
-- **PostgreSQL** - Database
-- **CSS Modules** - Styling
-- **Docker** - Containerization
-
-## Browser Support
-
-- Chrome/Chromium (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Mobile Support
-
-- iOS Safari
-- Android Chrome
-- Touch gestures for navigation
-- Responsive design for all screen sizes
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
