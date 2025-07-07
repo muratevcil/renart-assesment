@@ -13,10 +13,10 @@ This is the basic scheme of the project.
 - Use npm i to install necessary packages.
 - Create .env file in the root of the project.
 - Configure .env file according to these fields:
-    DATABASE_URL=
-    GOLD_API_BASE_URL=https://www.goldapi.io/api
-    GOLD_API_ACCESS_TOKEN=
-    ! We use GoldAPI.io. You can get your token from the website and fill out.
+    -DATABASE_URL=
+    -GOLD_API_BASE_URL=https://www.goldapi.io/api
+    -GOLD_API_ACCESS_TOKEN=
+    -! We use GoldAPI.io. You can get your token from the website and fill out.
 - Use "docker compose up" in the root directory from the terminal.
 - Use "npx prisma generate" to generate a new prisma client.
 - If you want to load sample data, use "npx tsx seed.ts" in the "/scripts" directory.
@@ -25,10 +25,10 @@ This is the basic scheme of the project.
 
 ##View
 
-![Preview](./public/withoutfilter.png)
+![Preview](./public/withfilter.png)
 
 This is the main page view which contains the products. You can move to left and right to view the next or last package of 5 products.
 
-![Preview](./public/withfilter.png)
+![Preview](./public/withoutfilter.png)
 
 This is the view of when you use filtering in the project.
