@@ -1,34 +1,82 @@
+# Renart Full Stack Development Internship/Case Study
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Introduction
 
-This is the repository of solution of Renart Full Stack Development Internship/Case Study. Altought I am intrested in backend development with Java Spring Boot, I built an app with Next.js/Prisma for fast development (all in once). The program contains all the features given in the instructions.
+This repository contains my solution for the Renart Full Stack Development Internship/Case Study. Although my main interest is backend development with Java Spring Boot, I built this app using Next.js and Prisma for rapid, full-stack development. The project implements all features required by the case study instructions.
 
-![Preview](./public/scheme.png)
+---
 
-This is the basic scheme of the project.
+## Features
+- Product listing with carousel pagination
+- Filtering by price and popularity
+- Responsive UI
+- PostgreSQL database with Prisma ORM
+- Gold price integration via GoldAPI.io
+- Dockerized setup for easy local development
 
+---
+
+## Project Structure
+
+![Project Scheme](./public/scheme.png)
+
+---
 
 ## Getting Started
-- Use npm i to install necessary packages.
-- Create .env file in the root of the project.
-- Configure .env file according to these fields:
-    -DATABASE_URL=
-    -GOLD_API_BASE_URL=https://www.goldapi.io/api
-    -GOLD_API_ACCESS_TOKEN=
-    -! We use GoldAPI.io. You can get your token from the website and fill out.
-- Use "docker compose up" in the root directory from the terminal.
-- Use "npx prisma generate" to generate a new prisma client.
-- If you want to load sample data, use "npx tsx seed.ts" in the "/scripts" directory.
-- Use "npm run dev" to start the project.
 
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-##View
+2. **Create a `.env` file** in the root directory with the following fields:
+   ```env
+   DATABASE_URL=
+   GOLD_API_BASE_URL=https://www.goldapi.io/api
+   GOLD_API_ACCESS_TOKEN=
+   ```
+   > **Note:** You can get your GoldAPI token from [goldapi.io](https://www.goldapi.io/).
 
-![Preview](./public/withfilter.png)
+3. **Start Docker Compose:**
+   ```bash
+   docker compose up
+   ```
 
-This is the main page view which contains the products. You can move to left and right to view the next or last package of 5 products.
+4. **Generate Prisma client:**
+   ```bash
+   npx prisma generate
+   ```
 
-![Preview](./public/withoutfilter.png)
+5. **(Optional) Seed sample data:**
+   ```bash
+   npx tsx scripts/seed.ts
+   ```
 
-This is the view of when you use filtering in the project.
+6. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## View
+
+### Main Page
+
+![Main Page Preview](./public/withoutfilter.png)
+
+> The main page displays products in a carousel. Use the left and right arrows to navigate through packages of 5 products.
+
+### Filtering
+
+![Filtered View Preview](./public/withfilter.png)
+
+> This view shows the product list after applying filters.
+
+---
+
+## Contact
+
+If you have any questions, you can contact me through muratevcilf@gmail.com.
