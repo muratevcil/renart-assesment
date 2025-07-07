@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This is the repository of solution of Renart Full Stack Development Internship/Case Study. Altought I am intrested in backend development with Java Spring Boot, I built an app with Next.js/Prisma for fast development (all in once). The program contains all the features given in the instructions.
 
-<img width="1386" alt="Scheme of Project" src="/public/scheme.png" />
+![Public](./public/scheme.png)
 
 This is the basic scheme of the project.
 
@@ -25,10 +25,10 @@ This is the basic scheme of the project.
 
 ##View
 
-<img width="1386" alt="Main Page View" src="/public/withoutfilter.png" />
+![Public](./public/withoutfilter.png)
 
 This is the main page view which contains the products. You can move to left and right to view the next or last package of 5 products.
 
-<img width="1386" alt="Main Page View" src="/public/withfilter.png" />
+![Public](./public/withfilter.png)
 
 This is the view of when you use filtering in the project.
